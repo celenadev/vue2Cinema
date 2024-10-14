@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,13 +13,23 @@
         }
     </style>
 </head>
+
 <body>
-<div id="app">
-    <div id="title">
-        <img src="/public/logo.png">
-        <h1>Vue.js Cinema</h1>
+    <div id="app">
+        <div id="title">
+            <img src="/public/logo.png">
+            <h1>Vue.js Cinema</h1>
+        </div>
+        <div id="overview">
+            <div id="main">
+                <!-- 76. Agregar matrices de filtros a la lista de películas -->
+                <movie-list v-bind:genre="genre" v-bind:time="time"></movie-list>
+                <!-- 74. Agregar una carga útil al evento de filtro de verificación -->
+                <movie-filter v-on:check-filter="checkFilter"></movie-filter>
+            </div>
+        </div>
     </div>
-</div>
-<script src="/dist/build.js"></script>
+    <script src="/dist/build.js"></script>
 </body>
+
 </html>

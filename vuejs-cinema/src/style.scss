@@ -11,11 +11,12 @@ $alto: #dcdcdc;
   padding: 0 2rem;
 }
 
-$text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+$text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 
 $break-small: 800px;
 
-body, html {
+body,
+html {
   width: 100%;
   height: 100%;
   background-color: $charcoal;
@@ -50,7 +51,7 @@ body, html {
         padding: 0 0 0 1rem;
         font-size: 2.5rem;
         color: white;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         user-select: none;
       }
 
@@ -103,6 +104,7 @@ body, html {
 
           @media screen and (max-width: $break-small) {
             display: none;
+
             &.active {
               display: inline;
             }
@@ -120,10 +122,12 @@ body, html {
             user-select: none;
             font-weight: bold;
             padding: 0;
+
             span {
               width: 40px;
               font-size: 3rem;
               position: relative;
+
               &:after {
                 position: absolute;
                 left: 5px;
@@ -163,6 +167,7 @@ body, html {
           }
         }
       }
+
       .movie-col-right {
         padding-left: 1rem;
 
@@ -197,6 +202,7 @@ body, html {
               font-size: 1.25rem;
               line-height: 1.25rem;
             }
+
             .movie-rating {
               font-size: 0.8rem;
               line-height: 1rem;
@@ -221,6 +227,7 @@ body, html {
         #movie-list {
           flex-basis: 75%;
         }
+
         #movie-filter {
           flex-basis: 25%;
 
@@ -253,7 +260,7 @@ body, html {
                 margin-bottom: 0.5rem;
                 font-weight: bold;
                 color: white;
-                text-shadow: 1px 1px 1px rgba(0,0,0,0.3);
+                text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
                 white-space: nowrap;
 
                 @media screen and (max-width: $break-small) {
@@ -274,7 +281,7 @@ body, html {
       }
     }
 
-    $filter-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    $filter-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
 
     #movie-filter {
       color: $white;
@@ -399,6 +406,7 @@ body, html {
               td {
                 vertical-align: top;
               }
+
               td:first-child {
                 font-weight: bold;
                 padding-right: 0.5rem;
@@ -444,7 +452,7 @@ $arrow-border: 7px;
     }
 
     &:after {
-      content:'';
+      content: '';
       position: absolute;
       width: 0;
       height: 0;
@@ -455,4 +463,10 @@ $arrow-border: 7px;
       left: calc(50% - #{$arrow-border});
     }
   }
+}
+
+.checked-filter.active {
+  background-color: #b6b6b6;
+  border: 1px solid #00acc1;
+  color: #141414;
 }
