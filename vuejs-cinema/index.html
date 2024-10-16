@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vue.js Cinema</title>
-    <link rel="icon" href="/public/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="./src/public/favicon.ico" type="image/x-icon">
     <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
     <style>
         [v-cloak] {
@@ -17,17 +17,10 @@
 <body>
     <div id="app">
         <div id="title">
-            <img src="/public/logo.png">
+            <img src="./src/public/logo.png">
             <h1>Vue.js Cinema</h1>
         </div>
-        <div id="overview">
-            <div id="main">
-                <!-- 76. Agregar matrices de filtros a la lista de películas -->
-                <movie-list v-bind:genre="genre" v-bind:time="time"></movie-list>
-                <!-- 74. Agregar una carga útil al evento de filtro de verificación -->
-                <movie-filter v-on:check-filter="checkFilter"></movie-filter>
-            </div>
-        </div>
+        <router-view v-bind:genre="genre" v-bind:time="time" v-bind:movies="movies" v-bind:day="day"></router-view>
     </div>
     <script src="/dist/build.js"></script>
 </body>
